@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="./HorizontalScroller.min.js"></script>
+    <title>Horizontal Scroller</title>
+</head>
+<body>
+
+    <!-- <div class="horizontal_scroller">
+        <div class="left_arrow">&#x276e</div>
+
+        <div class="horizontal_scroller_content">
+
+            <div class="card">
+                <img src="https://picsum.photos/600?random=0" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id alias nobis quis quo magni. Doloremque officiis magnam in eligendi fuga, cum minima ea et alias!</p>
+            </div>
+        </div>
+
+        <div class="right_arrow">&#x276f</div>
+    </div> -->
+
+    <div class="horizontal_scroller">
+
+        
+    </div>
+
+    <button onclick="build()">Build</button>
+    <button onclick="reset()">Reset</button>
+
+
+    <script>
+        //Fill the scroller programmatically. Thanks Lorem Picsum for the images
+        let scroller = document.querySelector(".horizontal_scroller");
+        let html = "";
+        for(var i=1; i<20; i++){
+            html +=
+            `<div class="card">
+                <img src="https://picsum.photos/600?random=${i}" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id alias nobis quis quo magni. Doloremque officiis magnam in eligendi fuga, cum minima ea et alias!</p>
+            </div>`;
+        }
+        scroller.innerHTML = html;
+
+        //Call this to build the horizontal scroller
+        buildHorizontalScrollers();
+
+        function build(){
+            buildSingleScroller(scroller, 400,"px",true);
+        }
+
+        function reset() {
+            resetScroller(scroller);
+        }
+    </script>
+</body>
+</html>

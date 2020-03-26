@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(255, 250, 244);
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    box-shadow: 4px 4px rgba(128, 128, 128, 0.418);
+    width: 20em;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
